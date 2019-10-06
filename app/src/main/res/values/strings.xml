@@ -5,7 +5,7 @@
     <string name="release_date">Release Date:</string>
     <string name="sort_by_popular">Sort By Popular</string>
     <string name="sort_by_top_rated">Sort By Top Rated</string>
-    <string name="API_KEY">0ce9e623e6c898c6ae335d5be474c624</string>
+    <string name="API_KEY">YOUR_API_KEY_HERE</string>
     <string name="Host">api.themoviedb.org</string>
     <string name="https">https</string>
     <string name="discover">discover</string>
