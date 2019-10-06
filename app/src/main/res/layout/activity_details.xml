@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Details">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/movie_title"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="#00BCD4"
+            android:text="@string/title"
+            android:textColor="#ffff"
+            android:layout_marginBottom="5dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fav_la"
+            android:layout_below="@id/release_date"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/thumbnail"
+            android:layout_marginTop="30dp"
+            android:onClick="SaveToFavs">
+
+            <ImageView
+                android:id="@+id/unicon_fav"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_stars_black_24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_favorite"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/unicon_fav"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/unfav_la"
+            android:layout_below="@id/release_date"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/thumbnail"
+            android:layout_marginTop="30dp"
+            android:onClick="DeleteFav">
+
+            <ImageView
+                android:id="@+id/icon_fav"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_error_outline_black_24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_favorite"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/icon_fav"/>
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginStart="5dp"
+            android:layout_below="@id/movie_title"
+            android:id="@+id/thumbnail"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vote_average"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/thumbnail"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/movie_title"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/release_date"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_toEndOf="@id/thumbnail"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/vote_average"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/overview"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:layout_below="@+id/thumbnail"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/trailers_d"
+            android:background="#00BCD4"
+            android:textColor="#ffff"
+            android:gravity="center"
+            android:padding="8dp"
+            android:id="@+id/trailer_lbl"
+            android:textSize="20sp"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:layout_below="@id/overview"
+
+            />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trailers"
+            android:layout_below="@id/trailer_lbl"
+
+            android:background="#C4F0F7"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reviews_d"
+            android:background="#00BCD4"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textColor="#ffff"
+            android:id="@+id/Reviews_lbl"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_below="@id/trailers"
+
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reviews_Recycler"
+            android:layout_below="@+id/Reviews_lbl"
+            android:layout_marginTop="10dp"/>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
